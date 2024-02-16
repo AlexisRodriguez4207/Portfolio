@@ -1,11 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-			<h1>Portfolio</h1>
-	</main>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        Hey, Soy Alexis <div class="flex justify-center items-center">
+          <Badge>Disponible para trabajar</Badge>
+        </div>
+      </h1>
+      <h2 class="text-xl opacity-80">
+        Soy Alexis Rodriguiez un estudiante de Ingeniería en Sistemas. De
+        Tijuana, México. Especializado en FrontEnd.
+      </h2>
+    </section>
+  </main>
 </Layout>
-
