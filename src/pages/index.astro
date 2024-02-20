@@ -2,20 +2,34 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hey, Soy Alexis <div class="flex justify-center items-center">
+        Hey, Soy Alexis <a
+          href="https://www.linkedin.com/in/ascenderdev"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
           <Badge>Disponible para trabajar</Badge>
-        </div>
+        </a>
       </h1>
-      <h2 class="text-xl opacity-80">
-        Soy Alexis Rodriguiez un estudiante de Ingeniería en Sistemas. De
-        Tijuana, México. Especializado en FrontEnd.
+      <h2 class="text-2xl text-wrap">
+        <span class="text-purple-300/90"
+          >Soy Alexis Rodriguiez un estudiante de Ingeniería en Sistemas.</span
+        > De Tijuana, México. Especializado en FrontEnd.
       </h2>
+
+      <nav class="flex gap-x-2">
+        <SocialPill>
+          <LinkedInIcon class="w-6 h-6" /> LinkedIn
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
