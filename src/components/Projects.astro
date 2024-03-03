@@ -1,0 +1,32 @@
+---
+const Projects = [
+  {
+    title: "Guitaras LA",
+    description:
+      "Proyecto creado por parte de un curso de Udemy para poner en practica lo aprendido",
+    link: "https://guitarras-la-nextjs.vercel.app/",
+    github: "https://github.com/AlexisRodriguez4207/GuitarrasLA-Nextjs",
+    image: "/projects/svgl.webp",
+    tags: ["Next JS", "CSS"],
+  },
+];
+---
+
+{
+  Projects.map(({ image, title, description, tags }) => (
+    <article>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/20"
+        src={image}
+        alt={`Captura de Pantalla del Proyecto ${image}`}
+      />
+    </article>
+  ))
+}
